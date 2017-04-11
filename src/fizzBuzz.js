@@ -1,14 +1,17 @@
 var FizzBuzz = function() {};
 
 FizzBuzz.prototype.play = function(number){
-  if(number % 3 === 0 && number % 5 === 0) {
+  if(this._isDivisibleBy(number, 15)) {
     return 'fizzbuzz';
-  } else if(number % 3 === 0) {
+  } else if(this._isDivisibleBy(number, 3)) {
     return 'fizz';
-  } else if(number % 5 === 0) {
+  } else if(this._isDivisibleBy(number, 5)) {
     return 'buzz';
   } else {
     return number
   }
-
 }
+
+FizzBuzz.prototype._isDivisibleBy = function (number, divisor) {
+  return (number % divisor === 0 );
+};

@@ -28,9 +28,4 @@ describe('fizzbuzz', function() {
     });
   });
 
-
-
-
-
-
 });
